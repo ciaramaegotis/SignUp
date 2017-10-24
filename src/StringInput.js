@@ -4,7 +4,7 @@ class StringInput extends Component{
 	render(){
 		return(
 			<div>
-			<input type="string" value = {this.props.value} onChange = {this.props.changeHandler}/> {this.props.label}
+			<input type="string" className = "input" value = {this.props.value} placeholder = {this.props.placeholder} onChange = {this.props.changeHandler}/>
 			</div>
 		)
 	}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SignUpForm.css';
-
+import StringInput from './StringInput';
 
 class SignUp extends Component{
 	constructor(props){
@@ -62,8 +62,8 @@ class SignUp extends Component{
 		return (
 			<div>
 				<p><b> Sign Up </b></p>
-				<input type = "string" className = "input" label = "First Name" placeholder = "First Name"/>
-				<input type = "string" className = "input" label = "Last Name" placeholder = "First Name"/>
+				<StringInput label = "First Name" placeholder = "First Name"/>
+				<StringInput label = "Last Name" placeholder = "First Name"/>
 				<input type = "password" className = "input" label = "Password" placeholder = "Password"/>
 				<input type = "string" className = "input" label = "Retype Password" placeholder = "Retype Password"/>
 				<p><b>Birthday</b></p>
