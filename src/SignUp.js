@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './SignUpForm.css';
 import StringInput from './StringInput';
+import PasswordInput from './PasswordInput';
+import DateInput from './DateInput';
 
 class SignUp extends Component{
 	constructor(props){
@@ -64,10 +66,10 @@ class SignUp extends Component{
 				<p><b> Sign Up </b></p>
 				<StringInput label = "First Name" placeholder = "First Name"/>
 				<StringInput label = "Last Name" placeholder = "First Name"/>
-				<input type = "password" className = "input" label = "Password" placeholder = "Password"/>
-				<input type = "string" className = "input" label = "Retype Password" placeholder = "Retype Password"/>
+				<PasswordInput label = "Password" placeholder = "Password"/>
+				<PasswordInput label = "Retype Password" placeholder = "Retype Password"/>
 				<p><b>Birthday</b></p>
-				<input type = "date" className = "input" label = "Birthday"/>
+				<DateInput label = "Birthday"/>
 				<select name="Province" className = "input">
 				    <option value="volvo">Volvo</option>
 				    <option value="saab">Saab</option>
