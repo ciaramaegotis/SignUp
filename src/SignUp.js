@@ -3,6 +3,8 @@ import './SignUpForm.css';
 import StringInput from './StringInput';
 import PasswordInput from './PasswordInput';
 import DateInput from './DateInput';
+import Provinces from './provinces';
+import DropdownInput from './DropdownInput';
 
 class SignUp extends Component{
 	constructor(props){
@@ -30,6 +32,10 @@ class SignUp extends Component{
 		this.handleProvinceChange = this.handleProvinceChange.bind(this);
 		this.handleMunicipalityChange = this.handleMunicipalityChange.bind(this);
 				
+	}
+
+	getInformation(e){
+
 	}
 
 	handleFirstNameChange(e){
@@ -64,26 +70,16 @@ class SignUp extends Component{
 		return (
 			<div>
 				<p><b> Sign Up </b></p>
-				<StringInput label = "First Name" placeholder = "First Name"/>
-				<StringInput label = "Last Name" placeholder = "First Name"/>
-				<PasswordInput label = "Password" placeholder = "Password"/>
-				<PasswordInput label = "Retype Password" placeholder = "Retype Password"/>
+				<StringInput label = "First Name" placeholder = "First Name" changeHandler = {this.handleFirstNameChange}/>
+				<StringInput label = "Last Name" placeholder = "First Name" changeHandler = {this.handleLastNameChange}/>
+				<PasswordInput label = "Password" placeholder = "Password" changeHandler = {this.handlePasswordChange}/>
+				<PasswordInput label = "Retype Password" placeholder = "Retype Password" changeHandler = {this.handleRepeatPasswordChange}/>
 				<p><b>Birthday</b></p>
-				<DateInput label = "Birthday"/>
-				<select name="Province" className = "input">
-				    <option value="volvo">Volvo</option>
-				    <option value="saab">Saab</option>
-				    <option value="fiat">Fiat</option>
-				    <option value="audi">Audi</option>
-			 	</select>
-			 	<select name="Municipality" className = "input">
-				    <option value="volvo">Volvo</option>
-				    <option value="saab">Saab</option>
-				    <option value="fiat">Fiat</option>
-				    <option value="audi">Audi</option>
-			 	</select>
+				<DateInput label = "Birthday" changeHandler = {this.handleBirthdayChange}/>
+				<DropdownInput label = "Province" changeHandler = {this.handleProvinceChange}/>
+			 	<DropdownInput label = "Municipality" changeHandler = {this.handleMunicipalityChange}/>
 
-				<button id = "signup-button">
+				<button id = "signup-button" className = "input-row">
 				Create Account
 				</button>
 				
