@@ -53,11 +53,14 @@ class SignUp extends Component{
 		}else{
 			this.passwordInput.state.errorMessage = "";
 		}
-
-		if (this.state.repeatPassword != this.state.password){
-			this.repeatPasswordInput.setState({errorMessage: "Passwords dont't match"});
+		if (this.state.repeatPassword == ""){
+			this.repeatPasswordInput.setState({errorMessage: "Repeat password is required"});
 		}else{
-			this.repeatPasswordInput.state.errorMessage = "";
+			if (this.state.repeatPassword != this.state.password){
+				this.repeatPasswordInput.setState({errorMessage: "Passwords dont't match"});
+			}else{
+				this.repeatPasswordInput.state.errorMessage = "";
+			}
 		}
 
 		if (this.state.birthday == ""){
